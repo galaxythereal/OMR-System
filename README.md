@@ -11,7 +11,7 @@
 1. Create a new Kaggle notebook
 ```bash
 # Clone repository if using locally
-git clone https://github.com/your-username/omr-system.git
+git clone https://github.com/galaxythereal/omr-system.git
 cd omr-system
 ```
 

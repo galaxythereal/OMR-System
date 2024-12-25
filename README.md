@@ -12,6 +12,7 @@
   - [Seeing Opportunity](#motivation-&-seeing-opportunity)
   - [Other Ideas](#other-considered-project-ideas)
   - [Our Project](#the-chosen-project)
+
 - [Project Proposal](#Project-Proposal)
   - [Executive Summary](#executive-summary)
   - [Problem Statement](#problem-statement)
@@ -20,28 +21,28 @@
   - [Methodology](#methodology)
   - [Timeline and Deliverables](#timeline-and-deliverables)
   - [Requirements](#resource-requirements)
+
 - [Progress Report 1](#progress-report-1)
 - [Progress Report 2](#progress-report-2)
 - [Progress Report 3](#progress-report-3)
 - [Final Report](#final-report)
 - [SETUP Instructions](#setup-instructions)
-  - [Requirements.txt](#requirements.txt)
 
 ## Introduction
 
 ### Motivation & Seeing Opportunity
 
-![](screenshot.png)
+![](C:\Users\mahmo\Pictures\Screenshots\Screenshot 2024-12-24 202434.png)
 
 ### Other Considered Project Ideas
 
 - Creating  a Facial Recognition system as employees of FEE line up in a lengthy queue every morning and afternoon to use the fingerprint attendance system causing inconvenience & delay for them and jamming at the main gate
 
-  ![](images11.jpg)
+  ![](C:\Users\mahmo\Downloads\images.jpg)
 
 - Number plate recognition system that will allow the security personnel to know the authorized cars
 
-![](car-drives-barrier-blocking-exit-260nw-2364604423.webp)
+![](C:\Users\mahmo\Downloads\car-drives-barrier-blocking-exit-260nw-2364604423.webp)
 
 
 
@@ -52,7 +53,7 @@
 - Due to budget and timing constraints we decided to go with the OMR Bubble sheet Marking System
 - The project is built to continue and we plan on deploying it on a hardware chip (e.g Raspberry Pi or some other cheaper alternative) along with a camera module and use it in our faculty as a student led initiative and hopefully we inspire and motivate the surrounding environment to think of such ideas that will benefit our community and solve real life problems
 
-![](images (1).jpg)
+![](C:\Users\mahmo\Downloads\images (1).jpg)
 
 
 
@@ -500,89 +501,3 @@ The Automated OMR System project has successfully delivered a robust solution fo
 ### Conclusion
 
 The project has successfully delivered a production-ready OMR system that meets all initial requirements and demonstrates excellent performance metrics. The system is ready for deployment and will significantly improve the efficiency of examination processing within the institution.
-
-
-
-
-
-### Setup Instructions
-
-
-
-#### Prerequisites
-
-- Python 3.8+
-- CUDA-capable GPU (recommended)
-- Kaggle account
-
-#### Installation Steps
-
-1. Create a new Kaggle notebook
-
-```bash
-# Clone repository if using locally
-git clone https://github.com/galaxythereal/omr-system.git
-cd omr-system
-```
-
-2. Install required packages
-
-```bash
-pip install -r requirements.txt
-```
-
-3. Upload the following folder structure to Kaggle:
-
-```
-omr_data/
-├── filled/
-│   └── box_*.png
-├── empty/
-│   └── box_*.png
-└── test_sheets/
-    └── *.jpg
-```
-
-4. Mount Google Drive in Kaggle notebook
-
-```python
-from google.colab import drive
-drive.mount('/content/drive')
-```
-
-5. Run the training script
-
-```python
-python train_model.py
-```
-
-6. Test the system
-
-```python
-python test_omr.py --image_path /path/to/test/sheet.jpg
-```
-
-#### Requirements.txt
-
-```
-tensorflow==2.14.0
-opencv-python==4.8.1
-numpy==1.24.3
-Pillow==10.0.0
-matplotlib==3.7.2
-scikit-learn==1.3.0
-pandas==2.0.3
-```
-
-#### Usage
-
-1. Prepare the answer sheet according to the template
-2. Scan or photograph the sheet (ensure good lighting)
-3. Run the processing script
-4. Review results in the generated output
-
-#### Troubleshooting
-
-- Ensure proper lighting conditions
-- Check image is properly aligned
-- Verify bubble filling is clear and complete

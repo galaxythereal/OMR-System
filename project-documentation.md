@@ -17,6 +17,7 @@
   - [Executive Summary](#executive-summary)
   - [Problem Statement](#problem-statement)
   - [Project Objectives](#project-objectives)
+  - [Project Flowchart](#project-main-flow)
   - [Methodology](#methodology)
   - [Timeline and Deliverables](#timeline-and-deliverables)
   - [Requirements](#resource-requirements)
@@ -81,6 +82,84 @@ Faculty members currently spend considerable time manually grading multiple-choi
 3. Achieve grading accuracy exceeding 99%
 4. Reduce grading time by at least 90% compared to manual processing
 5. Create a system that can be easily integrated into existing examination workflows
+
+
+
+### Project Main Flow
+
+```mermaid
+flowchart TB
+    subgraph Input
+        A[Start] --> B[Load OMR Sheet Image]
+    end
+
+    subgraph Image_Preprocessing
+        B --> C[Resize Image]
+        C --> D[Convert to Grayscale]
+        D --> E[Apply Gaussian Blur]
+        E --> F[Canny Edge Detection]
+    end
+
+    subgraph Contour_Detection
+        F --> G[Find Contours]
+        G --> H[Filter Rectangular Contours]
+        H --> I[Get Corner Points]
+    end
+
+    subgraph Perspective_Transform
+        I --> J[Calculate Transform Matrix]
+        J --> K[Apply Perspective Transform]
+        K --> L[Convert to Grayscale]
+        L --> M[Apply Binary Threshold]
+    end
+
+    subgraph Answer_Detection
+        M --> N[Split into Individual Boxes]
+        N --> O[Load CNN Model]
+    end
+
+    subgraph CNN_Processing
+        O --> P[Preprocess Each Box]
+        P --> Q[Classify Boxes]
+        Q --> R[Create Answer Matrix]
+    end
+
+    subgraph Grading
+        R --> S[Compare with Answer Key]
+        S --> T[Calculate Score]
+        T --> U[Generate Result]
+    end
+
+    subgraph Output
+        U --> V[Display Results]
+        V --> W[End]
+    end
+
+    subgraph CNN_Model_Architecture
+        direction TB
+        CNN1[Input Layer<br>256x256x3] --> CNN2[Conv2D<br>32 filters]
+        CNN2 --> CNN3[MaxPool2D]
+        CNN3 --> CNN4[Conv2D<br>64 filters]
+        CNN4 --> CNN5[MaxPool2D]
+        CNN5 --> CNN6[Conv2D<br>128 filters]
+        CNN6 --> CNN7[MaxPool2D]
+        CNN7 --> CNN8[Flatten]
+        CNN8 --> CNN9[Dense<br>128 neurons]
+        CNN9 --> CNN10[Dropout<br>0.5]
+        CNN10 --> CNN11[Dense<br>2 neurons]
+    end
+
+    subgraph Data_Augmentation
+        direction TB
+        DA1[Original Image] --> DA2[Random Flip]
+        DA2 --> DA3[Random Brightness]
+        DA3 --> DA4[Random Contrast]
+        DA4 --> DA5[Random Saturation]
+    end
+
+    O -.-> CNN_Model_Architecture
+    P -.-> Data_Augmentation
+```
 
 ### Methodology
 

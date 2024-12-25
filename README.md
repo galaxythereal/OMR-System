@@ -31,17 +31,17 @@
 
 ### Motivation & Seeing Opportunity
 
-![](C:\Users\mahmo\Pictures\Screenshots\Screenshot 2024-12-24 202434.png)
+![](Screenshot 2024-12-24 202434.png)
 
 ### Other Considered Project Ideas
 
 - Creating  a Facial Recognition system as employees of FEE line up in a lengthy queue every morning and afternoon to use the fingerprint attendance system causing inconvenience & delay for them and jamming at the main gate
 
-  ![](C:\Users\mahmo\Downloads\images.jpg)
+  ![](images.jpg)
 
 - Number plate recognition system that will allow the security personnel to know the authorized cars
 
-![](C:\Users\mahmo\Downloads\car-drives-barrier-blocking-exit-260nw-2364604423.webp)
+![](car-drives-barrier-blocking-exit-260nw-2364604423.webp)
 
 
 
@@ -52,7 +52,7 @@
 - Due to budget and timing constraints we decided to go with the OMR Bubble sheet Marking System
 - The project is built to continue and we plan on deploying it on a hardware chip (e.g Raspberry Pi or some other cheaper alternative) along with a camera module and use it in our faculty as a student led initiative and hopefully we inspire and motivate the surrounding environment to think of such ideas that will benefit our community and solve real life problems
 
-![](C:\Users\mahmo\Downloads\images (1).jpg)
+![](images (1).jpg)
 
 
 

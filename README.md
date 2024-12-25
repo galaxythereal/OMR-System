@@ -31,7 +31,7 @@
 
 ### Motivation & Seeing Opportunity
 
-![](Screenshot 2024-12-24 202434.png)
+![](screenshot.png)
 
 ### Other Considered Project Ideas
 
